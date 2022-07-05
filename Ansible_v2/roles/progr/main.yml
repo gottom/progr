@@ -1,0 +1,9 @@
+- name: Copy rpm file to server
+  copy:
+     src: progr.rpm
+     dest: /home/user/progr-0.0.1-1.el7.noarch.rpm
+
+- name: Install package.
+  yum:
+     name: /tmp/progr-0.0.1-1.el7.noarch.rpm
+     state: present
