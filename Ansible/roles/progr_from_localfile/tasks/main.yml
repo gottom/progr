@@ -1,0 +1,13 @@
+- name: Copy rpm file to server
+  copy:
+     src: progr-0.0.1-1.el7.noarch.rpm
+     dest: /home/user/
+
+- name: Install package.
+  yum:
+     name: /home/user/progr-0.0.1-1.el7.noarch.rpm
+     state: present
+
+- name: Set variables
+  ansible.builtin.shell: message=['message']
+
