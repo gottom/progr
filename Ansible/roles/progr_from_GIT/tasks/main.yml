@@ -1,0 +1,2 @@
+- name: download and install
+  yum: name=https://github.com/gottom/progr/raw/main/progr-0.0.1-1.el7.noarch.rpm state=present
